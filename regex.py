@@ -1,13 +1,10 @@
 import re
 
-phoneNumRegex = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
-mo = phoneNumRegex.search('My number is 415-555-4242.')
+phoneNumRegex = re.compile(r'\S\S\S\S\S@\S\S.\S\S\S.\S\S\S')
+mo = phoneNumRegex.search('My number dofJLajlkajdkjAF; dpagetti@br.ibm.com is 415-555-4242 SAKDJLajflkAJF;Lkjlksadjsalkdj.')
 
 print (mo.group())
 
-mo2 = phoneNumRegex.search('My  is 415-555-4242.')
-
-print (mo2.group())
 
 
 print('Phone number found: ' + mo.group())
