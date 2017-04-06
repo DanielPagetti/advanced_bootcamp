@@ -3,6 +3,9 @@
    # Usage: py.exe mcb.pyw save <keyword> - Saves clipboard to keyword.
    #        py.exe mcb.pyw <keyword> - Loads keyword to clipboard.
    #        py.exe mcb.pyw list - Loads all keywords to clipboard.
+   #        py.exe mcb.pyw delete <keyword> - delete clipboard to keyword.
+   #        py.exe mcb.pyw all - delete all clipboard.
+
 
 import shelve, pyperclip, sys
 
@@ -18,4 +21,9 @@ elif len(sys.argv) == 2:
        pyperclip.copy(str(list(mcbShelf.keys())))
     elif sys.argv[1] in mcbShelf:
        pyperclip.copy(mcbShelf[sys.argv[1]])
+    elif sys.argv[1].lower() == 'delete':
+       mcbShelf.pop(sys.argv[2])
+    elif sys.argv[1].lower() == 'all':
+       mcbShelf.clear()
+
 mcbShelf.close()
