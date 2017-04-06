@@ -9,4 +9,4 @@ for filename in os.listdir(arqpath):
         for line in my_textfile:
             result = filterre.search(line)
         my_textfile.close()
-print (result)
+print (result.group())
