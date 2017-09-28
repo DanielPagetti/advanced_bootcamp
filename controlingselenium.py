@@ -17,6 +17,10 @@ except:
 linkElem = browser.find_element_by_link_text('Read It Online')
 type(linkElem)
 linkElem.click()
+type(linkElem)
+linkElem.click()
+
+
 
 browser = webdriver.Firefox()
 browser.get('https://mail.yahoo.com')
