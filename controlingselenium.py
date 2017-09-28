@@ -19,6 +19,8 @@ type(linkElem)
 linkElem.click()
 type(linkElem)
 linkElem.click()
+type(linkElem)
+linkElem.click()
 
 
 
